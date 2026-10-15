@@ -2,9 +2,9 @@
     "export_name": "rpgmaker_game",
     "version": "1.0",
     "project_path": "Project1",
-    "itch_user": "",
-    "itch_project_stub": "",
-    "channel_prefix": "",
+    "itch_user": "marmadilemanteater",
+    "itch_project_stub": "test-project",
+    "channel_prefix": "testing-",
     "enable_build": 1,
-    "enable_publish": 0
+    "enable_publish": 1
 }
