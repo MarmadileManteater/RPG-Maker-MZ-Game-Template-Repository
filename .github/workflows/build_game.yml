@@ -22,7 +22,7 @@ jobs:
         run: |
           cp -r $PROJECT_PATH/* ./win-x64
           cp ./licenses/* ./win-x64
-          mv ./win-x64/nw.exe ./linux-x64/Game.exe
+          mv ./win-x64/nw.exe ./win-x64/Game.exe
           rm ./win-x64/game.rmmzproject
           bash ./.github/workflows/cull.sh ./win-x64
       - name: Upload Artifact
