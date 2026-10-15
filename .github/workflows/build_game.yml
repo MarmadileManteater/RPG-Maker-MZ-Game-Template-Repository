@@ -23,6 +23,7 @@ jobs:
           cp -r $PROJECT_PATH/* ./win-x64
           cp ./licenses/* ./win-x64
           rm ./win-x64/game.rmmzproject
+          bash ./.github/workflows/cull.sh ./win-x64
       - name: Upload Artifact
         if: env.PROJECT_PATH != '' && env.ENABLE_BUILD == 1
         uses: actions/upload-artifact@v7
@@ -49,8 +50,10 @@ jobs:
         if: env.PROJECT_PATH != '' && env.ENABLE_BUILD == 1
         run: |
           cp -r $PROJECT_PATH/* ./linux-x64
+          mv ./linux-x64/nw ./linux-x64/Game
           cp ./licenses/* ./linux-x64
           rm ./linux-x64/game.rmmzproject
+          bash ./.github/workflows/cull.sh ./linux-x64
       - name: Upload Artifact
         if: env.PROJECT_PATH != '' && env.ENABLE_BUILD == 1
         uses: actions/upload-artifact@v7
@@ -76,6 +79,7 @@ jobs:
           cp -r $PROJECT_PATH ./web
           cp ./licenses/* ./web
           rm ./web/game.rmmzproject
+          bash ./.github/workflows/cull.sh ./web
       - name: Upload Artifact
         if: env.PROJECT_PATH != '' && env.ENABLE_BUILD == 1
         uses: actions/upload-artifact@v7
